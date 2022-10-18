@@ -64,11 +64,12 @@ describe("🚩 Challenge 3: ⚖️ 🪙 Simple DEX", function () {
           let tx1 = dexContract.connect(user2.signer).ethToToken({
             value: ethers.utils.parseEther("1"),
           });
-          // expect(tx1).emit(dexContract, "EthToTokenSwap").withArgs(user2.address, __, ethers.utils.parseEther("1"));
+           //expect(tx1).emit(dexContract, "EthToTokenSwap")
+           //.withArgs(user2.address, __, ethers.utils.parseEther("1"));
         });
         // could insert more tests to show the declining price, and what happens when the pool becomes very imbalanced.
       });
-      describe("tokenToEth", async () => {
+      describe("tokenToEth()", async () => {
         it("Should send 1 $BAL to DEX in exchange for _ $ETH", async function () {
           const balloons_bal_start = await balloonsContract.balanceOf(dexContract.address);
           
